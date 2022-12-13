@@ -1,4 +1,4 @@
-abstract class RoutesName {
+class RoutesName {
   static const String baseScreenRoute = '/';
   static const String splashRoute = '/splash';
   static const String signInRoute = '/signin';
