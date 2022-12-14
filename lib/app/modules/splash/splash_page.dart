@@ -1,3 +1,4 @@
+import 'package:diet_pdf/app/shared/ui/widgets/diet_button.dart';
 import 'package:flutter/material.dart';
 import 'package:diet_pdf/app/shared/ui/widgets/diet_form_field.dart';
 
@@ -13,13 +14,10 @@ class SplashPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text('Inicio app'),
-              const DietFormField(),
-              ElevatedButton(
-                child: const Text('Diet Button'),
-                onPressed: () {},
-              ),
+            children: const [
+              Text('Inicio app'),
+              DietFormField(),
+              DietButton(text: 'Diet Button'),
             ],
           ),
         ),
