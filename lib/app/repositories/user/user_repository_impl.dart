@@ -1,9 +1,9 @@
 import 'package:diet_pdf/app/exception/auth_exception.dart';
-import 'package:diet_pdf/app/repositories/user/user_reopository.dart';
+import 'package:diet_pdf/app/repositories/user/user_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-class UserRepositoryImpl implements UserReopository {
+class UserRepositoryImpl implements UserRepository {
   FirebaseAuth _firebaseAuth;
 
   UserRepositoryImpl({required FirebaseAuth firebaseAuth})
@@ -35,7 +35,7 @@ class UserRepositoryImpl implements UserReopository {
 
       if (e.code == 'account-exists-with-different-credencial') {
         throw AuthException(message: '''
-        Login inválido, você se registrou no TodoList com os seguintes provedores:
+        Login inválido, você se registrou no app com os seguintes provedores:
         ${loginMethods!.join(',')}
         ''');
       } else {
